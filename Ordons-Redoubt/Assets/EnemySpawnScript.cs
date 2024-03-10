@@ -7,14 +7,8 @@ public class EnemySpawnScript : MonoBehaviour
     public GameObject enemy;
     public float spawnRate = 2f;
     private float timer = 0f;
-    public float heightOffest = 10f;
-    public float widthOffest = 10f;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
+    public float heightOffest;
+    public float widthOffest;
 
     // Update is called once per frame
     void Update()
