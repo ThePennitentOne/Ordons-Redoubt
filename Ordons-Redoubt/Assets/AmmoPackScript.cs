@@ -19,15 +19,21 @@ public class AmmoPackScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.tag.Equals("Player"))
+        if (collision.gameObject.tag.Equals("RotatePoint"))
+        {
+            ammoSpawn.SpawnAmmoPack();
+            Destroy(gameObject);
+        }
+
+        if (collision.gameObject.tag.Equals("Player") && ammo.ammoCount == 0)
         {
             ammo.IncreaseAmmo(4);
-            ammoSpawn.SpawnAmmoPack();
+            ammoSpawn.ammoPackExists = false;
             Destroy(gameObject);
         }
     }

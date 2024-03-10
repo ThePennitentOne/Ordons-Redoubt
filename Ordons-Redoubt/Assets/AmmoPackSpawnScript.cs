@@ -7,17 +7,25 @@ public class AmmoPackSpawnScript : MonoBehaviour
     public GameObject ammoPack;
     public float heightOffest = 10f;
     public float widthOffest = 10f;
+    public bool ammoPackExists = false;
+    public AmmoScript ammo;
+    public AmmoPackSpawnScript ammoSpawn;
 
     // Start is called before the first frame update
     void Start()
     {
-        SpawnAmmoPack();
+        ammo = GameObject.FindGameObjectWithTag("AmmoManager").GetComponent<AmmoScript>();
+        ammoSpawn = GameObject.FindGameObjectWithTag("AmmoPackSpawner").GetComponent<AmmoPackSpawnScript>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if (ammo.ammoCount == 0 && !ammoPackExists)
+        {
+            ammoPackExists = true;
+            ammoSpawn.SpawnAmmoPack();
+        }
     }
 
     public void SpawnAmmoPack()

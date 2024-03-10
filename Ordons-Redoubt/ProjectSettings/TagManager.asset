@@ -8,6 +8,7 @@ TagManager:
   - Bullet
   - AmmoPackSpawner
   - AmmoManager
+  - RotatePoint
   layers:
   - Default
   - TransparentFX

@@ -483,6 +483,9 @@ MonoBehaviour:
   ammoPack: {fileID: 1164572995968308536, guid: 60f95b371b5eb1d479cc6407beb30acf, type: 3}
   heightOffest: 5
   widthOffest: 5
+  ammoPackExists: 0
+  ammo: {fileID: 0}
+  ammoSpawn: {fileID: 0}
 --- !u!4 &268062279
 Transform:
   m_ObjectHideFlags: 0
@@ -1021,7 +1024,7 @@ GameObject:
   - component: {fileID: 1038467232}
   m_Layer: 0
   m_Name: Rotate Point
-  m_TagString: Untagged
+  m_TagString: RotatePoint
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
