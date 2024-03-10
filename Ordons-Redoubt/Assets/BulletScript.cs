@@ -8,6 +8,8 @@ public class BulletScript : MonoBehaviour
     private Camera mainCamera;
     private Rigidbody2D rb;
     public float force = 5f;
+    public float deadZoneX = 9.5f;
+    public float deadZoneY = 5.6f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,5 +19,14 @@ public class BulletScript : MonoBehaviour
         mousePos = mainCamera.ScreenToWorldPoint(Input.mousePosition);
         Vector3 direction = mousePos - transform.position;
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        if (transform.position.x < -deadZoneX || transform.position.x > deadZoneX || transform.position.y < -deadZoneY || transform.position.y > deadZoneY)
+        {
+            Destroy(gameObject);
+        }
     }
 }
