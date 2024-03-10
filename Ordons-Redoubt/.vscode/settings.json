@@ -56,5 +56,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "Ordons-Redoubt.sln"
+    "dotnet.defaultSolution": "Ordons-Redoubt.sln",
+    "editor.defaultFormatter": "ms-dotnettools.csharp"
 }
