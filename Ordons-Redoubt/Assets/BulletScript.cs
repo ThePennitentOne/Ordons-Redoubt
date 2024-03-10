@@ -18,10 +18,4 @@ public class BulletScript : MonoBehaviour
         Vector3 direction = mousePos - transform.position;
         rb.velocity = new Vector2(direction.x, direction.y).normalized * force;
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
