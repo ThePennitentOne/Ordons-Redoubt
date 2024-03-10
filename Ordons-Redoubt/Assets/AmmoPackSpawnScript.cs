@@ -11,7 +11,7 @@ public class AmmoPackSpawnScript : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+        SpawnAmmoPack();
     }
 
     // Update is called once per frame

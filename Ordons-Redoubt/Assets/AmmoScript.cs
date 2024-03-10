@@ -15,4 +15,11 @@ public class AmmoScript : MonoBehaviour
         ammoCount -= ammoToDecrease;
         ammoText.text = ammoCount.ToString() + " ammo";
     }
+
+    [ContextMenu("IncreaseAmmo")]
+    public void IncreaseAmmo(int ammoToIncrease)
+    {
+        ammoCount += ammoToIncrease;
+        ammoText.text = ammoCount.ToString() + " ammo";
+    }
 }
