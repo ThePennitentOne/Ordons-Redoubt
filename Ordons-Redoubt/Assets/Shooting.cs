@@ -12,6 +12,7 @@ public class Shooting : MonoBehaviour
     private float timer;
     public float timeBetweenFiring = 0.3f;
     public bool playerIsAtCannon = false;
+    public AmmoScript ammo;
 
     // Start is called before the first frame update
     void Start()
@@ -38,6 +39,7 @@ public class Shooting : MonoBehaviour
         {
             canFire = false;
             Instantiate(bullet, bulletTransform.position, bulletTransform.rotation);
+            ammo.DecreaseAmmo(1);
         }
     }
 

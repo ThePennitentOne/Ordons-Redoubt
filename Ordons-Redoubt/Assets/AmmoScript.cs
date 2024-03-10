@@ -1,18 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AmmoScript : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    public int ammo = 4;
+    public TextMeshProUGUI ammoText;
 
-    // Update is called once per frame
-    void Update()
+    [ContextMenu("DecreaseAmmo")]
+    public void DecreaseAmmo(int ammoToDecrease)
     {
-        
+        ammo -= ammoToDecrease;
+        ammoText.text = ammo.ToString() + " ammo";
     }
 }
