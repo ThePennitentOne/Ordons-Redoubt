@@ -11,6 +11,7 @@ public class Shooting : MonoBehaviour
     public bool canFire = true;
     private float timer;
     public float timeBetweenFiring = 0.3f;
+    bool playerIsAtCannon = false;
 
     // Start is called before the first frame update
     void Start()
@@ -32,11 +33,21 @@ public class Shooting : MonoBehaviour
                 canFire = true;
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.Space) && canFire)
+        
+        if (Input.GetKeyDown(KeyCode.Space) && canFire && playerIsAtCannon)
         {
             canFire = false;
             Instantiate(bullet, bulletTransform.position, bulletTransform.rotation);
         }
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        playerIsAtCannon = true;
+    }
+
+    void OnTriggerExit2D(Collider2D collision)
+    {
+        playerIsAtCannon = false;
     }
 }
