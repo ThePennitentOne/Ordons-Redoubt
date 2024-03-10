@@ -11,7 +11,7 @@ public class Shooting : MonoBehaviour
     public bool canFire = true;
     private float timer;
     public float timeBetweenFiring = 0.3f;
-    bool playerIsAtCannon = false;
+    public bool playerIsAtCannon = false;
 
     // Start is called before the first frame update
     void Start()
@@ -43,11 +43,17 @@ public class Shooting : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        playerIsAtCannon = true;
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            playerIsAtCannon = true;
+        }
     }
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        playerIsAtCannon = false;
+        if (collision.gameObject.tag.Equals("Player"))
+        {
+            playerIsAtCannon = false;
+        }
     }
 }
