@@ -35,7 +35,7 @@ public class Shooting : MonoBehaviour
             }
         }
         
-        if (Input.GetKeyDown(KeyCode.Space) && canFire && playerIsAtCannon)
+        if (Input.GetKeyDown(KeyCode.Space) && canFire && playerIsAtCannon && ammo.ammoCount > 0)
         {
             canFire = false;
             Instantiate(bullet, bulletTransform.position, bulletTransform.rotation);

@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 public class AmmoScript : MonoBehaviour
 {
-    public int ammo = 4;
+    public int ammoCount = 4;
     public TextMeshProUGUI ammoText;
 
     [ContextMenu("DecreaseAmmo")]
     public void DecreaseAmmo(int ammoToDecrease)
     {
-        ammo -= ammoToDecrease;
-        ammoText.text = ammo.ToString() + " ammo";
+        ammoCount -= ammoToDecrease;
+        ammoText.text = ammoCount.ToString() + " ammo";
     }
 }
