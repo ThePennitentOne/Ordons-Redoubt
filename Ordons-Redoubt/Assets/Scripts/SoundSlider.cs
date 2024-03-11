@@ -7,8 +7,6 @@ public class AudioSlider : MonoBehaviour
     [SerializeField]
     private AudioMixer Mixer;
 
-   
-
     private void Start()
     {
         Mixer.SetFloat("Volume", Mathf.Log10(PlayerPrefs.GetFloat("Volume", 1) * 20));
@@ -16,19 +14,9 @@ public class AudioSlider : MonoBehaviour
 
     public void OnChangeSlider(float Value)
     {
-        
-
-      
-            
-            Mixer.SetFloat("Volume", Mathf.Log10(Value) * 20);
-                    
-        
-
-        
+        Mixer.SetFloat("Volume", Mathf.Log10(Value) * 20);
 
         PlayerPrefs.SetFloat("Volume", Value);
         PlayerPrefs.Save();
     }
-
-
 }
