@@ -1057,7 +1057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05b47676a7f9f3d4aa16339ca25aa07e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 8767708753381534871, guid: 638d58a7694232a40ae383e6acbfdd35, type: 3}
+  bullet: {fileID: 8767708753381534871, guid: 793716013c914f0489980698324b1d77, type: 3}
   bulletTransform: {fileID: 271631654}
   canFire: 1
   timeBetweenFiring: 0.3
