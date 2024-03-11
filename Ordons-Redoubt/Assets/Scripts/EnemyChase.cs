@@ -8,7 +8,7 @@ public class EnemyChase : MonoBehaviour
     public GameObject player;
     public float speed = 1f;
     // private float distance;
-    public float deadZoneX = 9.4f;
+    public float deadZoneX = 9.2f;
     public float deadZoneY = 5.6f;
 
     // Start is called before the first frame update
