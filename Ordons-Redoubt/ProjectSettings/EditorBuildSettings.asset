@@ -6,6 +6,13 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+<<<<<<< HEAD
     path: Assets/Scenes/game.unity
+=======
+    path: Assets/Scenes/Gameplay.unity
+>>>>>>> origin/pixelnoob
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/GameOver.unity
+    guid: 3aea20f1e1b817d4f9eec825b60341ef
   m_configObjects: {}
