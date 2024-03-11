@@ -19,12 +19,12 @@ public class EnemySpawnScript : MonoBehaviour
         }
         else
         {
-            SpawnPipe();
+            SpawnEnemy();
             timer = 0f;
         }
     }
 
-    private void SpawnPipe()
+    private void SpawnEnemy()
     {
         float lowestPoint = transform.position.y - heightOffest;
         float highestPoint = transform.position.y + heightOffest;
