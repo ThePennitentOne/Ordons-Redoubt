@@ -3,8 +3,12 @@
      
     public class SceneChanger : MonoBehaviour
     {
+        [SerializeField]
+        private string target;
+        
         public void NextScene()
         {
-            SceneManager.LoadScene("game");
+            
+            SceneManager.LoadScene(target);
         }
     }
